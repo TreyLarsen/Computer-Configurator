@@ -5,48 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="icon" type="image/png" href="../websiteimages/faicon.png">
-    <link rel="script" href="../js/script.js">
-    <script src="../js/script.js"></script>
-    <title>SiphonBuilds | PC Builder Configurator</title>
+    <script src="../js/script.js" defer></script>
+    <title>SiphonBuilds | Build Your Own PC</title>
 </head>
 <body>
-<div class="topnav" id="myTopnav">
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
-  <a href="#home" class="brand" aria-label="SiphonBuilds home">
-    <img src="../websiteimages/logo.png" alt="SiphonBuilds logo">
-  </a>
-  <a href="#home" class="active">Home</a>
-  <div class="dropdown">
-    <button class="dropbtn">Products
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#prebuilts">Pre-Built PCs</a>
-      <a href="#buildyourown">Build your own PC</a>
+<header class="site-header">
+  <nav class="topnav" id="myTopnav" aria-label="Primary">
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation">☰</a>
+    <a href="index.html" class="brand" aria-label="SiphonBuilds home">
+      <img src="../websiteimages/logo.png" alt="SiphonBuilds logo">
+    </a>
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn active" type="button">Products</button>
+      <div class="dropdown-content">
+        <a href="prebuilts.html">Pre-Built PCs</a>
+        <a href="buildyourown.html">Build Your Own PC</a>
+      </div>
     </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">Contact
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#email">Link 1</a>
-      <a href="#phone">Link 2</a>
-      <a href="#socials">Link 3</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <a href="#about">About</a>
-</div>
-</body>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="builder-hero">
+    <p class="eyebrow">Configurator</p>
+    <h1>Build a system that matches your budget, workload, and style.</h1>
+    <p class="lede">Pick each major component and see the total update instantly. This is the core flow you would expand for a full LanForge-style store.</p>
+  </section>
+
+  <section class="builder-layout">
+    <form class="builder-panel" id="configuratorForm">
+      <div class="component-field">
+        <div class="component-head">
+          <img class="component-image" src="../websiteimages/cpu.svg" alt="CPU icon">
+          <label for="cpu">CPU</label>
+        </div>
+        <select id="cpu" name="cpu" data-label="CPU">
+          <option value="Ryzen 5 7600" data-price="279">Ryzen 5 7600 - $279</option>
+          <option value="Core i5-14600K" data-price="319">Core i5-14600K - $319</option>
+          <option value="Ryzen 7 7800X3D" data-price="399">Ryzen 7 7800X3D - $399</option>
+          <option value="Core i7-14700K" data-price="449">Core i7-14700K - $449</option>
+        </select>
+      </div>
+
+      <div class="component-field">
+        <div class="component-head">
+          <img class="component-image" src="../websiteimages/gpu.svg" alt="Graphics card icon">
+          <label for="gpu">GPU</label>
+        </div>
+        <select id="gpu" name="gpu" data-label="GPU">
+          <option value="RTX 4060 Ti" data-price="429">RTX 4060 Ti - $429</option>
+          <option value="RX 7800 XT" data-price="499">RX 7800 XT - $499</option>
+          <option value="RTX 4070 Super" data-price="599">RTX 4070 Super - $599</option>
+          <option value="RTX 4080 Super" data-price="999">RTX 4080 Super - $999</option>
+        </select>
+      </div>
+
+      <div class="component-field">
+        <div class="component-head">
+          <img class="component-image" src="../websiteimages/memory.svg" alt="Memory icon">
+          <label for="memory">Memory</label>
+        </div>
+        <select id="memory" name="memory" data-label="Memory">
+          <option value="16 GB DDR5" data-price="79">16 GB DDR5 - $79</option>
+          <option value="32 GB DDR5" data-price="129">32 GB DDR5 - $129</option>
+          <option value="64 GB DDR5" data-price="229">64 GB DDR5 - $229</option>
+        </select>
+      </div>
+
+      <div class="component-field">
+        <div class="component-head">
+          <img class="component-image" src="../websiteimages/storage.svg" alt="Storage icon">
+          <label for="storage">Storage</label>
+        </div>
+        <select id="storage" name="storage" data-label="Storage">
+          <option value="1 TB NVMe" data-price="89">1 TB NVMe - $89</option>
+          <option value="2 TB NVMe" data-price="149">2 TB NVMe - $149</option>
+          <option value="4 TB NVMe" data-price="279">4 TB NVMe - $279</option>
+        </select>
+      </div>
+
+      <div class="component-field">
+        <div class="component-head">
+          <img class="component-image" src="../websiteimages/case.svg" alt="PC case icon">
+          <label for="case">Case</label>
+        </div>
+        <select id="case" name="case" data-label="Case">
+          <option value="Airflow Mid-Tower" data-price="119">Airflow Mid-Tower - $119</option>
+          <option value="Showcase Glass" data-price="159">Showcase Glass - $159</option>
+          <option value="Compact ITX" data-price="139">Compact ITX - $139</option>
+        </select>
+      </div>
+
+      <div class="component-field">
+        <div class="component-head">
+          <img class="component-image" src="../websiteimages/cooling.svg" alt="Cooling icon">
+          <label for="cooling">Cooling</label>
+        </div>
+        <select id="cooling" name="cooling" data-label="Cooling">
+          <option value="Air Cooler" data-price="69">Air Cooler - $69</option>
+          <option value="240 mm AIO" data-price="129">240 mm AIO - $129</option>
+          <option value="360 mm AIO" data-price="169">360 mm AIO - $169</option>
+        </select>
+      </div>
+
+      <div class="info-strip">
+        <div>
+          <p class="eyebrow">Next step</p>
+          <p class="summary-text">Use this page as the main configurator entry point and connect it to inventory later.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-secondary" href="prebuilts.html">Compare pre-builts</a>
+          <button class="button button-primary" type="button" id="randomizeBuild">Randomize build</button>
+        </div>
+      </div>
+    </form>
+
+    <aside class="summary-panel" aria-live="polite">
+      <div>
+        <p class="eyebrow">Build summary</p>
+        <h2 class="summary-title" id="build-name">Nightforge custom</h2>
+        <p class="summary-text" id="build-type">Balanced gaming and creation build</p>
+      </div>
+
+      <div class="fps-panel">
+        <span class="badge">Fortnite FPS</span>
+        <strong id="fortniteFps">0 FPS</strong>
+        <p id="fpsMode">1080p Performance Mode</p>
+      </div>
+
+      <div>
+        <span class="badge">Live total</span>
+        <div class="price-total" id="builder-total">$0</div>
+      </div>
+
+      <div class="budget-meter" aria-hidden="true"><span id="completionFill"></span></div>
+      <p class="summary-text">Completion: <strong id="completionValue">0%</strong></p>
+
+      <ul class="summary-list" id="partsList"></ul>
+
+      <div class="info-strip">
+        <div>
+          <p class="eyebrow">Assembly</p>
+          <p class="summary-text">Professional build service is added automatically.</p>
+        </div>
+        <strong id="builder-grand-total">$0</strong>
+      </div>
+
+      <p class="summary-text" id="builder-note">Choose your parts to generate a recommendation.</p>
+      <div class="contact-band" id="compatibilityNote">Your selections will appear here.</div>
+    </aside>
+  </section>
+</main>
 </body>
 </html>

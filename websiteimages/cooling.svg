@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" role="img" aria-labelledby="title desc">
+  <title id="title">Cooling icon</title>
+  <desc id="desc">Stylized radiator and fan for the configurator</desc>
+  <rect width="240" height="160" rx="24" fill="#0d1727"/>
+  <circle cx="120" cy="80" r="38" fill="none" stroke="#edf5ff" stroke-width="5"/>
+  <circle cx="120" cy="80" r="16" fill="#edf5ff"/>
+  <path d="M120 42c8 4 10 14 7 22s-11 14-20 13c-8-2-15-8-18-16 5-8 15-15 31-19Z" fill="#57d6ff" opacity="0.85"/>
+  <path d="M158 80c-4 8-14 10-22 7s-14-11-13-20c2-8 8-15 16-18 8 5 15 15 19 31Z" fill="#a87bff" opacity="0.85"/>
+  <path d="M120 118c-8-4-10-14-7-22s11-14 20-13c8 2 15 8 18 16-5 8-15 15-31 19Z" fill="#46f0b2" opacity="0.85"/>
+  <path d="M82 80c4-8 14-10 22-7s14 11 13 20c-2 8-8 15-16 18-8-5-15-15-19-31Z" fill="#57d6ff" opacity="0.85"/>
+</svg>

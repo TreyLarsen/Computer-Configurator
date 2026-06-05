@@ -5,48 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="icon" type="image/png" href="../websiteimages/faicon.png">
-    <link rel="script" href="../js/script.js">
-    <script src="../js/script.js"></script>
-    <title>SiphonBuilds | PC Builder Configurator</title>
+    <script src="../js/script.js" defer></script>
+    <title>SiphonBuilds | Custom PC Configurator</title>
 </head>
 <body>
-<div class="topnav" id="myTopnav">
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
-  <a href="#home" class="brand" aria-label="SiphonBuilds home">
-    <img src="../websiteimages/logo.png" alt="SiphonBuilds logo">
-  </a>
-  <a href="#home" class="active">Home</a>
-  <div class="dropdown">
-    <button class="dropbtn">Products
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#prebuilts">Pre-Built PCs</a>
-      <a href="#buildyourown">Build your own PC</a>
+<header class="site-header">
+  <nav class="topnav" id="myTopnav" aria-label="Primary">
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation">☰</a>
+    <a href="index.html" class="brand" aria-label="SiphonBuilds home">
+      <img src="../websiteimages/logo.png" alt="SiphonBuilds logo">
+    </a>
+    <a href="index.html" class="active">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn" type="button">Products</button>
+      <div class="dropdown-content">
+        <a href="prebuilts.html">Pre-Built PCs</a>
+        <a href="buildyourown.html">Build Your Own PC</a>
+      </div>
     </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">Contact
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#email">Link 1</a>
-      <a href="#phone">Link 2</a>
-      <a href="#socials">Link 3</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-copy">
+      <p class="eyebrow">Like LanForge, built your way</p>
+      <h1>Design a custom PC with parts, pricing, and style that all line up.</h1>
+      <p class="lede">SiphonBuilds is a clean starting point for a premium PC configurator. Pick a path, compare options, and move from idea to build without leaving the site.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="buildyourown.html">Start a build</a>
+        <a class="button button-secondary" href="prebuilts.html">See pre-built rigs</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>8</strong><span>core components tracked</span></div>
+        <div><strong>Live</strong><span>pricing updates</span></div>
+        <div><strong>Fast</strong><span>mobile-friendly layout</span></div>
+      </div>
     </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+    <div class="hero-panel">
+      <div class="build-card">
+        <span class="build-card-label">Featured build</span>
+        <h2>Nightforge 760</h2>
+        <p>Balanced for 1440p gaming and everyday creation work.</p>
+        <div class="spec-row"><span>CPU</span><strong>Ryzen 7 class</strong></div>
+        <div class="spec-row"><span>GPU</span><strong>RTX 4070 class</strong></div>
+        <div class="spec-row"><span>Memory</span><strong>32 GB DDR5</strong></div>
+        <div class="spec-row"><span>Storage</span><strong>1 TB NVMe</strong></div>
+        <div class="build-card-price">
+          <span>From</span>
+          <strong>$1,899</strong>
+        </div>
+      </div>
     </div>
-  </div>
-  <a href="#about">About</a>
-</div>
-</body>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-heading">
+      <p class="eyebrow">Why this layout works</p>
+      <h2>Direct pathways instead of a generic storefront.</h2>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>Guided build flow</h3>
+        <p>Help people move from CPU to case without getting lost in a giant inventory wall.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Premium presentation</h3>
+        <p>Dark surfaces, accent lighting, and strong contrast make the configurator feel deliberate.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Conversion focus</h3>
+        <p>Every section points toward a build, a pre-built system, or a support contact.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section split-section">
+    <div>
+      <p class="eyebrow">Popular routes</p>
+      <h2>Two ways to start.</h2>
+    </div>
+    <div class="route-grid">
+      <a class="route-card" href="buildyourown.html">
+        <span>Custom builder</span>
+        <strong>Choose every part and see the total update instantly.</strong>
+      </a>
+      <a class="route-card" href="prebuilts.html">
+        <span>Pre-built machines</span>
+        <strong>Browse ready-made systems that fit common budgets and use cases.</strong>
+      </a>
+    </div>
+  </section>
+
+  <section class="section contact-band" id="contact">
+    <div>
+      <p class="eyebrow">Ready to refine it</p>
+      <h2>Next step: connect the builder to your preferred parts list and checkout flow.</h2>
+    </div>
+    <a class="button button-primary" href="buildyourown.html">Open the configurator</a>
+  </section>
+</main>
+
 </body>
 </html>

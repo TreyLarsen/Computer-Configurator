@@ -5,48 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="icon" type="image/png" href="../websiteimages/faicon.png">
-    <link rel="script" href="../js/script.js">
-    <script src="../js/script.js"></script>
-    <title>SiphonBuilds | PC Builder Configurator</title>
+    <script src="../js/script.js" defer></script>
+    <title>SiphonBuilds | Pre-Built PCs</title>
 </head>
 <body>
-<div class="topnav" id="myTopnav">
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
-  <a href="#home" class="brand" aria-label="SiphonBuilds home">
-    <img src="../websiteimages/logo.png" alt="SiphonBuilds logo">
-  </a>
-  <a href="#home" class="active">Home</a>
-  <div class="dropdown">
-    <button class="dropbtn">Products
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#prebuilts">Pre-Built PCs</a>
-      <a href="#buildyourown">Build your own PC</a>
+<header class="site-header">
+  <nav class="topnav" id="myTopnav" aria-label="Primary">
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation">☰</a>
+    <a href="index.html" class="brand" aria-label="SiphonBuilds home">
+      <img src="../websiteimages/logo.png" alt="SiphonBuilds logo">
+    </a>
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn active" type="button">Products</button>
+      <div class="dropdown-content">
+        <a href="prebuilts.html">Pre-Built PCs</a>
+        <a href="buildyourown.html">Build Your Own PC</a>
+      </div>
     </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">Contact
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#email">Link 1</a>
-      <a href="#phone">Link 2</a>
-      <a href="#socials">Link 3</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <a href="#about">About</a>
-</div>
-</body>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-intro">
+    <p class="eyebrow">Pre-built systems</p>
+    <h1>Ready-made PCs for players, creators, and hybrid workloads.</h1>
+    <p class="lede">Use these as starting points for a catalog page, then connect them to inventory, availability, and checkout.</p>
+  </section>
+
+  <section class="catalog-grid">
+    <article class="catalog-card">
+      <img class="catalog-image" src="../websiteimages/case.svg" alt="Starter PC preview">
+      <span class="badge">Starter</span>
+      <h3>Pulse 550</h3>
+      <p>Great for esports, school work, and everyday multitasking.</p>
+      <div class="fps-chip">Fortnite FPS: 180-220</div>
+      <ul>
+        <li><strong>CPU</strong><span>Ryzen 5 class</span></li>
+        <li><strong>GPU</strong><span>RTX 4060 Ti class</span></li>
+        <li><strong>Memory</strong><span>16 GB DDR5</span></li>
+        <li><strong>Storage</strong><span>1 TB NVMe</span></li>
+      </ul>
+      <div class="catalog-footer">
+        <span class="price">$1,199</span>
+        <div class="action-row">
+          <a class="button button-secondary" href="buildyourown.html">Customize</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="catalog-card featured-card">
+      <img class="catalog-image" src="../websiteimages/gpu.svg" alt="Best seller PC preview">
+      <span class="badge">Best seller</span>
+      <h3>Nightforge 760</h3>
+      <p>A balanced all-rounder for 1440p gaming and content creation.</p>
+      <div class="fps-chip">Fortnite FPS: 240-300</div>
+      <ul>
+        <li><strong>CPU</strong><span>Ryzen 7 class</span></li>
+        <li><strong>GPU</strong><span>RTX 4070 Super class</span></li>
+        <li><strong>Memory</strong><span>32 GB DDR5</span></li>
+        <li><strong>Storage</strong><span>2 TB NVMe</span></li>
+      </ul>
+      <div class="catalog-footer">
+        <span class="price">$1,899</span>
+        <div class="action-row">
+          <a class="button button-primary" href="buildyourown.html">Customize</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="catalog-card">
+      <img class="catalog-image" src="../websiteimages/cooling.svg" alt="Creator PC preview">
+      <span class="badge">Creator</span>
+      <h3>Forge X</h3>
+      <p>Built for heavier multitasking, editing, and large project files.</p>
+      <div class="fps-chip">Fortnite FPS: 300-360</div>
+      <ul>
+        <li><strong>CPU</strong><span>Core i7 class</span></li>
+        <li><strong>GPU</strong><span>RTX 4080 Super class</span></li>
+        <li><strong>Memory</strong><span>64 GB DDR5</span></li>
+        <li><strong>Storage</strong><span>4 TB NVMe</span></li>
+      </ul>
+      <div class="catalog-footer">
+        <span class="price">$2,899</span>
+        <div class="action-row">
+          <a class="button button-secondary" href="buildyourown.html">Customize</a>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
 </body>
 </html>
