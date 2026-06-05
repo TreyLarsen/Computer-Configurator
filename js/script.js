@@ -33,6 +33,17 @@ document.addEventListener("DOMContentLoaded", function () {
   var randomizeButton = document.getElementById("randomizeBuild");
   var selects = Array.prototype.slice.call(form.querySelectorAll("select"));
 
+  // Store default image sources for each component head so we can restore them
+  var componentImageMap = new Map();
+  selects.forEach(function (select) {
+    var container = select.closest('.component-field');
+    if (!container) return;
+    var img = container.querySelector('img.component-image');
+    if (!img) return;
+    // Save the original src so we can fall back when an option has no custom image
+    componentImageMap.set(select.id || select.name, img.src);
+  });
+
   var gpuBaseFps = {
     "RTX 4060 Ti": 195,
     "RX 7800 XT": 220,
@@ -156,6 +167,22 @@ document.addEventListener("DOMContentLoaded", function () {
     if (compatibilityEl) {
       compatibilityEl.textContent = notes.length > 1 ? notes.slice(1).join(" ") : "No compatibility warnings.";
     }
+
+    // Update component preview images after summary updates
+    selects.forEach(function (select) {
+      var container = select.closest('.component-field');
+      if (!container) return;
+      var img = container.querySelector('img.component-image');
+      if (!img) return;
+      var option = selectedOption(select);
+      var custom = option && option.dataset && option.dataset.image;
+      if (custom) {
+        img.src = custom;
+      } else {
+        var key = select.id || select.name;
+        if (componentImageMap.has(key)) img.src = componentImageMap.get(key);
+      }
+    });
   }
 
   function randomizeBuild() {
