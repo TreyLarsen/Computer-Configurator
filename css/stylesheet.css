@@ -8,6 +8,10 @@ body {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
 }
 
 .topnav .brand-text,
@@ -17,7 +21,7 @@ body {
 }
 
 .topnav .brand img {
-  max-height: 24px;
+  max-height: 100px;
   width: auto;
 }
 
@@ -26,7 +30,7 @@ body {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 12px;
   text-decoration: none;
   font-size: 17px;
   font-family: "Trebuchet MS", "Segoe UI", Tahoma, sans-serif;
@@ -43,8 +47,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
-  padding: 0 20px;
+  background: linear-gradient(90deg, #050814 0%, #0b1020 55%, #1a0f2e 100%);
+  padding: 0;
 }
 
 .dropdown {
@@ -52,7 +56,7 @@ body {
 }
 
 .active {
-  background-color: #396bea;
+  background-color: #35cfff;
   color: white;
 }
 
@@ -70,7 +74,7 @@ body {
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 10px 12px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -95,7 +99,7 @@ body {
 }
 
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
+  background-color: #b04cff;
   color: white;
 }
 
