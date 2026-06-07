@@ -24,7 +24,8 @@
       </div>
     </div>
     <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
   </nav>
 </header>
 
@@ -37,12 +38,39 @@
 
   <section class="builder-layout">
     <form class="builder-panel" id="configuratorForm">
-      <div class="component-field">
+      <div class="component-progress" style="margin-bottom:16px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+          <p class="eyebrow" style="margin:0;">Build progress</p>
+          <p class="summary-text" id="componentProgressText" style="margin:0;">Step 0 of 0</p>
+        </div>
+        <div class="progress-track" style="background:var(--muted); height:10px; border-radius:6px; overflow:hidden;">
+          <span id="componentProgressFill" style="display:block; height:100%; width:0%; background:var(--accent);"></span>
+        </div>
+      </div>
+
+      <div class="component-field" data-step="1">
+        <div class="component-head">
+          <img class="component-image" src="../websiteimages/case.svg" alt="PC case icon">
+          <label for="case">Case</label>
+        </div>
+        <select id="case" name="case" data-label="Case" data-step="1">
+          <option value="LI LANCOOL 207" data-price="91.99">LI LANCOOL 207 - $91.99</option>
+          <option value="FRAME 4000D RS" data-price="98.99">FRAME 4000D RS - $98.99</option>
+          <option value="H5 Flow" data-price="109.99">H5 Flow - $109.99</option>
+          <option value="LI LANCOOL 217" data-price="131.99">LI LANCOOL 217 - $131.99</option>
+          <option value="LIA4" data-price="163.99">LIA4 - $163.99</option>
+          <option value="H7 Flow RGB" data-price="164.99">H7 Flow RGB - $164.99</option>
+          <option value="Design North ATX" data-price="170.99">Design North ATX - $170.99</option>
+          <option value="LI O11 Dynamic" data-price="175.99">LI O11 Dynamic - $175.99</option>
+        </select>
+      </div>
+
+      <div class="component-field" data-step="2">
         <div class="component-head">
           <img class="component-image" src="../websiteimages/cpu.svg" alt="CPU icon">
           <label for="cpu">CPU</label>
         </div>
-        <select id="cpu" name="cpu" data-label="CPU">
+        <select id="cpu" name="cpu" data-label="CPU" data-step="2">
           <option value="Ryzen 5 7600" data-price="279">Ryzen 5 7600 - $279</option>
           <option value="Core i5-14600K" data-price="319">Core i5-14600K - $319</option>
           <option value="Ryzen 7 7800X3D" data-price="399">Ryzen 7 7800X3D - $399</option>
@@ -50,12 +78,12 @@
         </select>
       </div>
 
-      <div class="component-field">
+      <div class="component-field" data-step="3">
         <div class="component-head">
           <img class="component-image" src="../websiteimages/gpu.svg" alt="Graphics card icon">
           <label for="gpu">GPU</label>
         </div>
-        <select id="gpu" name="gpu" data-label="GPU">
+        <select id="gpu" name="gpu" data-label="GPU" data-step="3">
           <option value="RTX 4060 Ti" data-price="429">RTX 4060 Ti - $429</option>
           <option value="RX 7800 XT" data-price="499">RX 7800 XT - $499</option>
           <option value="RTX 4070 Super" data-price="599">RTX 4070 Super - $599</option>
@@ -63,48 +91,36 @@
         </select>
       </div>
 
-      <div class="component-field">
+      <div class="component-field" data-step="4">
         <div class="component-head">
           <img class="component-image" src="../websiteimages/memory.svg" alt="Memory icon">
           <label for="memory">Memory</label>
         </div>
-        <select id="memory" name="memory" data-label="Memory">
+        <select id="memory" name="memory" data-label="Memory" data-step="4">
           <option value="16 GB DDR5" data-price="79">16 GB DDR5 - $79</option>
           <option value="32 GB DDR5" data-price="129">32 GB DDR5 - $129</option>
           <option value="64 GB DDR5" data-price="229">64 GB DDR5 - $229</option>
         </select>
       </div>
 
-      <div class="component-field">
+      <div class="component-field" data-step="5">
         <div class="component-head">
           <img class="component-image" src="../websiteimages/storage.svg" alt="Storage icon">
           <label for="storage">Storage</label>
         </div>
-        <select id="storage" name="storage" data-label="Storage">
+        <select id="storage" name="storage" data-label="Storage" data-step="5">
           <option value="1 TB NVMe" data-price="89">1 TB NVMe - $89</option>
           <option value="2 TB NVMe" data-price="149">2 TB NVMe - $149</option>
           <option value="4 TB NVMe" data-price="279">4 TB NVMe - $279</option>
         </select>
       </div>
 
-      <div class="component-field">
-        <div class="component-head">
-          <img class="component-image" src="../websiteimages/case.svg" alt="PC case icon">
-          <label for="case">Case</label>
-        </div>
-        <select id="case" name="case" data-label="Case">
-          <option value="Airflow Mid-Tower" data-price="119">Airflow Mid-Tower - $119</option>
-          <option value="Showcase Glass" data-price="159">Showcase Glass - $159</option>
-          <option value="Compact ITX" data-price="139">Compact ITX - $139</option>
-        </select>
-      </div>
-
-      <div class="component-field">
+      <div class="component-field" data-step="6">
         <div class="component-head">
           <img class="component-image" src="../websiteimages/cooling.svg" alt="Cooling icon">
           <label for="cooling">Cooling</label>
         </div>
-        <select id="cooling" name="cooling" data-label="Cooling">
+        <select id="cooling" name="cooling" data-label="Cooling" data-step="6">
           <option value="Air Cooler" data-price="69">Air Cooler - $69</option>
           <option value="240 mm AIO" data-price="129">240 mm AIO - $129</option>
           <option value="360 mm AIO" data-price="169">360 mm AIO - $169</option>
@@ -118,6 +134,7 @@
         </div>
         <div class="hero-actions">
           <a class="button button-secondary" href="prebuilts.html">Compare pre-builts</a>
+          <button class="button button-secondary" type="button" id="startCheckout">Demo checkout</button>
           <button class="button button-primary" type="button" id="randomizeBuild">Randomize build</button>
         </div>
       </div>

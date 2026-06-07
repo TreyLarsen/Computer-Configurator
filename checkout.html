@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/stylesheet.css">
+  <link rel="icon" type="image/png" href="../websiteimages/faicon.png">
+  <script src="../js/script.js" defer></script>
+  <title>SiphonBuilds | Checkout</title>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="topnav" id="myTopnav" aria-label="Primary">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation">☰</a>
+      <a href="index.html" class="brand" aria-label="SiphonBuilds home">
+        <img src="../websiteimages/logo.png" alt="SiphonBuilds logo">
+      </a>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" type="button">Products</button>
+        <div class="dropdown-content">
+          <a href="prebuilts.html">Pre-Built PCs</a>
+          <a href="buildyourown.html">Build Your Own PC</a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <p class="eyebrow">Checkout</p>
+      <h1>Review your order and complete checkout.</h1>
+      <p class="lede">This is a school project checkout flow. It does not process real payment.</p>
+    </section>
+
+    <section class="builder-layout">
+      <form class="builder-panel" id="checkoutForm">
+        <div class="component-field">
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Alex Gamer" required>
+        </div>
+        <div class="component-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="alex@example.com" required>
+        </div>
+        <div class="component-field">
+          <label for="address">Shipping address</label>
+          <input id="address" name="address" type="text" placeholder="123 Main St" required>
+        </div>
+        <div class="component-field">
+          <label for="city">City</label>
+          <input id="city" name="city" type="text" placeholder="Vancouver" required>
+        </div>
+        <div class="component-field">
+          <label for="cardNumber">Card number</label>
+          <input id="cardNumber" name="cardNumber" type="text" placeholder="4242 4242 4242 4242" maxlength="19" required>
+        </div>
+        <div class="component-field">
+          <label for="expiry">Expiry</label>
+          <input id="expiry" name="expiry" type="text" placeholder="12/28" maxlength="5" required>
+        </div>
+        <div class="component-field">
+          <label for="cvc">CVC</label>
+          <input id="cvc" name="cvc" type="text" placeholder="123" maxlength="4" required>
+        </div>
+        <p class="summary-text">Use sample details to continue.</p>
+        <div class="hero-actions">
+          <a class="button button-secondary" href="buildyourown.html">Back to builder</a>
+          <button class="button button-primary" type="submit">Place order</button>
+        </div>
+      </form>
+
+      <aside class="summary-panel">
+        <div>
+          <p class="eyebrow">Order summary</p>
+          <h2 class="summary-title" id="checkoutBuildName">Custom build</h2>
+          <p class="summary-text" id="checkoutBuildType">Selected parts will appear here.</p>
+        </div>
+
+        <ul class="summary-list" id="checkoutPartsList"></ul>
+
+        <div class="info-strip">
+          <div>
+            <p class="eyebrow">Totals</p>
+            <p class="summary-text" id="checkoutShipping">Shipping: $0</p>
+          </div>
+          <strong id="checkoutTotal">$0</strong>
+        </div>
+
+        <div class="contact-band" id="checkoutNotice">No real charge will be made.</div>
+      </aside>
+    </section>
+
+    <section class="section" id="confirmationPanel" style="display:none;">
+      <div class="section-heading">
+        <p class="eyebrow">Confirmed</p>
+        <h2>Order placed</h2>
+      </div>
+      <div class="contact-band">
+        <strong>Order #SB-2407</strong>
+        <p class="summary-text" style="margin:8px 0 0;">Your order is queued for assembly. Estimated delivery: 5-7 business days.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
