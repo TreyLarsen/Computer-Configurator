@@ -103,6 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function selectedOption(select) {
+    if (select.selectedIndex < 0) {
+      return null;
+    }
+
     return select.options[select.selectedIndex];
   }
 
@@ -126,6 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     visibleSelects.forEach(function (select) {
       var option = selectedOption(select);
+      if (!option || !option.dataset || !option.dataset.price) {
+        return;
+      }
+
       var price = Number(option.dataset.price || 0);
       total += price;
       partsMarkup.push('<li><span>' + (select.dataset.label || select.name) + '</span><strong>' + option.value + ' (' + formatCurrency(price) + ')</strong></li>');
@@ -233,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var container = select.closest('.component-field');
       if (container) container.style.display = '';
       select.disabled = false;
-      select.selectedIndex = Math.floor(Math.random() * select.options.length);
+      select.selectedIndex = 1 + Math.floor(Math.random() * Math.max(select.options.length - 1, 1));
     });
     updateComponentProgress();
     updateSummary();
@@ -242,10 +250,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function saveCheckoutState() {
     var order = selects.map(function (select) {
       var option = selectedOption(select);
+      var hasSelection = option && option.dataset && option.dataset.price;
       return {
         label: select.dataset.label || select.name,
-        value: option.value,
-        price: Number(option.dataset.price || 0)
+        value: hasSelection ? option.value : "",
+        price: hasSelection ? Number(option.dataset.price || 0) : 0
       };
     });
 
