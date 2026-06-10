@@ -281,9 +281,6 @@ document.addEventListener("DOMContentLoaded", function () {
       revealNext(select);
       updateSummary();
       updateComponentProgress();
-      if (select === selects[selects.length - 1]) {
-        saveCheckoutState();
-      }
     });
   });
 
